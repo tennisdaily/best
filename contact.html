@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z08NHR82GZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z08NHR82GZ');
+    </script>
+    <meta charset="UTF-8">
+    <title>Contact — Deuce Actu</title>
+    <link rel="icon" type="image/svg+xml" href="rect1.svg">
+    <meta name="description" id="meta-description" content="Contactez l'équipe de Deuce Actu pour toute question, remarque ou suggestion.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" id="canonical-link" href="https://deucee.shop/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" id="og-title" content="Contact — Deuce Actu">
+    <meta property="og:description" id="og-description" content="Contactez l'équipe de Deuce Actu.">
+    <meta property="og:url" id="og-url" content="https://deucee.shop/contact.html">
+    <meta property="og:image" id="og-image" content="https://deucee.shop/rect1.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Contact — Deuce Actu">
+    <meta name="twitter:description" id="twitter-description" content="Contactez l'équipe de Deuce Actu.">
+    <meta name="twitter:image" id="twitter-image" content="https://deucee.shop/rect1.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920113065336169" crossorigin="anonymous"></script>
+    <script src="icons.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <div id="site-header-root"></div>
+
+    <main class="flex-grow w-full">
+        <section class="hero-band court-pattern py-10 md:py-14 px-4 text-center">
+            <span class="hero-eyebrow"><span class="icon-svg" data-icon="envelope"></span>Une question ?</span>
+            <h1 class="font-display text-3xl md:text-4xl font-bold mt-3">Nous contacter</h1>
+        </section>
+
+        <div class="max-w-xl mx-auto px-4 py-10 md:py-14">
+            <form id="contact-form" onsubmit="submitContactForm(event)" class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 md:p-8 space-y-4">
+                <div>
+                    <label class="field-label">Nom</label>
+                    <input type="text" id="contact-name" class="field-input" required>
+                </div>
+                <div>
+                    <label class="field-label">Email</label>
+                    <input type="email" id="contact-email" class="field-input" required>
+                </div>
+                <div>
+                    <label class="field-label">Message</label>
+                    <textarea id="contact-message" rows="5" class="field-input" required></textarea>
+                </div>
+                <button type="submit" id="contact-submit-btn" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-2.5 rounded-lg font-bold text-sm transition shadow-md flex items-center justify-center gap-2">
+                    <span class="icon-svg" data-icon="envelope"></span> Envoyer le message
+                </button>
+                <p id="contact-success" class="hidden text-emerald-700 text-sm font-semibold text-center">Message envoyé, merci ! Nous vous répondrons rapidement.</p>
+                <p id="contact-error" class="hidden text-red-500 text-sm font-semibold text-center">Une erreur est survenue, merci de réessayer.</p>
+            </form>
+        </div>
+    </main>
+
+    <div id="site-footer-root"></div>
+
+    <script src="site.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

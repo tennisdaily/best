@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z08NHR82GZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z08NHR82GZ');
+    </script>
+    <meta charset="UTF-8">
+    <title>Circuit ATP — Deuce Actu</title>
+    <link rel="icon" type="image/svg+xml" href="rect1.svg">
+    <meta name="description" id="meta-description" content="Toute l'actualite du circuit ATP : resultats, analyses et portraits des joueurs du tennis masculin.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" id="canonical-link" href="https://deucee.shop/atp.html">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Deuce Actu">
+    <meta property="og:title" id="og-title" content="Circuit ATP — Deuce Actu">
+    <meta property="og:description" id="og-description" content="Toute l'actualite du circuit ATP : resultats, analyses et portraits des joueurs du tennis masculin.">
+    <meta property="og:url" id="og-url" content="https://deucee.shop/atp.html">
+    <meta property="og:image" id="og-image" content="https://deucee.shop/rect1.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Circuit ATP — Deuce Actu">
+    <meta name="twitter:description" id="twitter-description" content="Toute l'actualite du circuit ATP : resultats, analyses et portraits des joueurs du tennis masculin.">
+    <meta name="twitter:image" id="twitter-image" content="https://deucee.shop/rect1.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920113065336169" crossorigin="anonymous"></script>
+    <script src="icons.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <div id="site-header-root"></div>
+
+    <main class="flex-grow w-full">
+        <section class="hero-band court-pattern py-10 md:py-14 px-4 text-center">
+            <span class="hero-eyebrow"><span class="icon-svg" data-icon="tennisBall"></span>Circuit</span>
+            <h1 class="font-display text-3xl md:text-4xl font-bold mt-3">Circuit ATP</h1>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+            <div id="circuit-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"></div>
+            <div id="circuit-empty" class="hidden text-center text-slate-500 py-10 border border-dashed border-slate-300 rounded-xl">Aucun article publié pour le Circuit ATP pour le moment.</div>
+            <div class="text-center mb-10">
+                <button id="btn-load-more" onclick="loadCircuit(false)" class="load-more-btn hidden">
+                    <span class="icon-svg" data-icon="chevronDown"></span> Voir plus d'articles
+                </button>
+            </div>
+            <div class="ad-slot">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7920113065336169" data-ad-slot="REMPLACER_PAR_TON_ID_DE_BLOC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer-root"></div>
+
+    <script src="site.js"></script>
+    <script>
+        const CIRCUIT_CATEGORY = "ATP";
+        const CIRCUIT_PAGE_ID = "atp";
+    </script>
+    <script src="circuit.js"></script>
+</body>
+</html>

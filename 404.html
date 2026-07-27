@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page introuvable — Deuce Actu</title>
+    <link rel="icon" type="image/svg+xml" href="rect1.svg">
+    <meta name="robots" content="noindex, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="icons.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <div id="site-header-root"></div>
+
+    <main class="flex-grow w-full flex items-center justify-center px-4 py-20">
+        <div class="text-center max-w-md">
+            <span class="icon-svg notfound-ball text-yellow-400" data-icon="tennisBall" style="font-size:5rem;"></span>
+            <h1 class="font-display text-4xl font-bold text-emerald-950 mt-6">Faute !</h1>
+            <p class="text-slate-500 mt-3">Cette page n'existe pas ou plus — la balle est sortie du court.</p>
+            <a href="index.html" class="inline-flex items-center gap-2 load-more-btn mt-8" style="text-decoration:none;">
+                <span class="icon-svg" data-icon="arrowRight" style="transform:rotate(180deg);"></span> Retour à l'accueil
+            </a>
+        </div>
+    </main>
+
+    <div id="site-footer-root"></div>
+
+    <script src="site.js"></script>
+    <script>bootChrome('home');</script>
+</body>
+</html>

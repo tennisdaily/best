@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace rédaction — Deuce Actu</title>
+    <link rel="icon" type="image/svg+xml" href="rect1.svg">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="icons.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <div id="site-header-root"></div>
+
+    <main class="flex-grow w-full">
+        <div class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+
+            <div id="admin-guard" class="hidden text-center py-20">
+                <span class="icon-svg text-yellow-500 text-4xl" data-icon="lock"></span>
+                <p class="mt-4 text-lg font-bold text-slate-700">Connexion requise</p>
+                <p class="text-slate-500 text-sm mt-1">Connecte-toi via le bouton "Admin" en haut de page pour accéder à l'espace rédaction.</p>
+                <button onclick="toggleLoginModal()" class="load-more-btn mt-6">Se connecter</button>
+            </div>
+
+            <div id="admin-shell" class="admin-shell hidden">
+                <h1 class="font-display text-2xl md:text-3xl font-bold text-emerald-950 mb-6">Espace rédaction</h1>
+
+                <div class="admin-tabs">
+                    <button class="admin-tab active" id="tab-write" onclick="switchAdminTab('write')">Rédiger</button>
+                    <button class="admin-tab" id="tab-mine" onclick="switchAdminTab('mine')">Mes articles</button>
+                </div>
+
+                <!-- ONGLET RÉDACTION -->
+                <div id="panel-write">
+                    <form id="article-form" onsubmit="submitArticleForm(event)" class="space-y-5 bg-white rounded-xl border border-slate-100 shadow-sm p-6">
+                        <input type="hidden" id="editing-article-id" value="">
+
+                        <div>
+                            <label class="field-label">Titre de l'article</label>
+                            <input type="text" id="article-title" class="field-input" required>
+                        </div>
+
+                        <div>
+                            <label class="field-label">Circuit</label>
+                            <select id="article-category" class="field-input" required>
+                                <option value="ATP">Circuit ATP</option>
+                                <option value="WTA">Circuit WTA</option>
+                                <option value="ITF">Circuit ITF</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="field-label">Photo de couverture</label>
+                            <div id="upload-placeholder" onclick="document.getElementById('article-image-file').click()" class="border-2 border-dashed border-slate-300 rounded-xl p-6 text-center cursor-pointer hover:border-emerald-400 transition text-slate-400">
+                                <span class="icon-svg text-3xl" data-icon="cloudUp"></span>
+                                <p class="text-sm mt-2 font-semibold">Cliquer pour choisir une image</p>
+                            </div>
+                            <input type="file" id="article-image-file" accept="image/*" class="hidden" onchange="handleImageSelect(event)">
+
+                            <div id="framing-picker-wrap" class="hidden mt-3">
+                                <div class="relative rounded-xl overflow-hidden border border-slate-200" style="aspect-ratio:16/9;">
+                                    <img id="image-preview" class="w-full h-full object-cover" style="object-position:center center;">
+                                    <div id="framing-grid" class="framing-grid absolute inset-0"></div>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-1.5">Clique sur la grille pour choisir le cadrage de la photo.</p>
+                                <input type="hidden" id="article-image-position" value="center center">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="field-label">Contenu</label>
+                            <textarea id="article-content" rows="12" class="field-input" required placeholder="## Sous-titre pour une section&#10;Texte normal ici. **mot en emphase**."></textarea>
+                            <p class="text-xs text-slate-400 mt-1.5">Astuce : une ligne commençant par <code>##</code> devient un sous-titre, <code>**texte**</code> est mis en emphase.</p>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button type="submit" id="submit-article-btn" class="load-more-btn flex-1 justify-center">
+                                <span class="icon-svg" data-icon="floppy"></span> <span id="submit-article-label">Publier l'article</span>
+                            </button>
+                            <button type="button" id="cancel-edit-btn" onclick="resetArticleForm()" class="hidden px-4 py-3 rounded-xl border border-slate-300 text-slate-600 font-bold text-sm hover:bg-slate-50 transition">Annuler</button>
+                        </div>
+                        <p id="form-error" class="hidden text-red-500 text-sm font-semibold"></p>
+                    </form>
+                </div>
+
+                <!-- ONGLET MES ARTICLES -->
+                <div id="panel-mine" class="hidden">
+                    <div id="my-articles-list" class="space-y-3"></div>
+                    <div id="my-articles-empty" class="hidden text-center text-slate-500 py-10 border border-dashed border-slate-300 rounded-xl">Tu n'as encore publié aucun article.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer-root"></div>
+
+    <script src="site.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

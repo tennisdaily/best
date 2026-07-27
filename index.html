@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z08NHR82GZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z08NHR82GZ');
+    </script>
+    <meta charset="UTF-8">
+    <title>Deuce Actu — Actualités des circuits ATP, WTA et ITF</title>
+    <link rel="icon" type="image/svg+xml" href="rect1.svg">
+    <meta name="description" id="meta-description" content="Suivez toute l'actualité brûlante du tennis mondial. Analyses, résultats et portraits sur les circuits ATP, WTA et ITF.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" id="canonical-link" href="https://deucee.shop/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Deuce Actu">
+    <meta property="og:title" id="og-title" content="Deuce Actu — Actualités des circuits ATP, WTA et ITF">
+    <meta property="og:description" id="og-description" content="Suivez toute l'actualité brûlante du tennis mondial. Analyses, résultats et portraits sur les circuits ATP, WTA et ITF.">
+    <meta property="og:url" id="og-url" content="https://deucee.shop/">
+    <meta property="og:image" id="og-image" content="https://deucee.shop/rect1.svg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Deuce Actu — Actualités des circuits ATP, WTA et ITF">
+    <meta name="twitter:description" id="twitter-description" content="Suivez toute l'actualité brûlante du tennis mondial.">
+    <meta name="twitter:image" id="twitter-image" content="https://deucee.shop/rect1.svg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Deuce Actu",
+      "url": "https://deucee.shop/",
+      "hasPart": [
+        { "@type": "SiteNavigationElement", "name": "Circuit ATP", "url": "https://deucee.shop/atp.html" },
+        { "@type": "SiteNavigationElement", "name": "Circuit WTA", "url": "https://deucee.shop/wta.html" },
+        { "@type": "SiteNavigationElement", "name": "Circuit ITF", "url": "https://deucee.shop/itf.html" },
+        { "@type": "SiteNavigationElement", "name": "À propos", "url": "https://deucee.shop/a-propos.html" }
+      ]
+    }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920113065336169" crossorigin="anonymous"></script>
+    <script src="icons.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <script>
+    // Redirige les anciens liens de l'ex-version mono-page (?page=..., ?article=...)
+    // vers les nouvelles pages dédiées, pour ne perdre ni visiteurs ni référencement.
+    (function () {
+        const params = new URLSearchParams(window.location.search);
+        const page = params.get('page');
+        const article = params.get('article');
+        const map = { atp: 'atp.html', wta: 'wta.html', itf: 'itf.html', about: 'a-propos.html', privacy: 'confidentialite.html', legal: 'mentions-legales.html' };
+        if (article) window.location.replace('article.html?a=' + encodeURIComponent(article));
+        else if (page && map[page]) window.location.replace(map[page]);
+    })();
+    </script>
+
+    <div id="site-header-root"></div>
+
+    <main class="flex-grow w-full">
+        <section class="hero-band court-pattern py-14 md:py-20 px-4">
+            <div class="max-w-6xl mx-auto text-center">
+                <span class="hero-eyebrow"><span class="icon-svg" data-icon="tennisBall"></span>Le tennis, sans temps mort</span>
+                <h1 class="font-display text-3xl md:text-5xl font-bold mt-4 mb-4 leading-tight">L'actualité du tennis mondial,<br class="hidden md:block"> circuit par circuit.</h1>
+                <p class="text-emerald-100 max-w-xl mx-auto text-sm md:text-base">Résultats, analyses et portraits sur l'ATP, la WTA et l'ITF — mis à jour au fil des tournois.</p>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+
+            <div id="featured-slot" class="mb-10"></div>
+
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="text-xl md:text-2xl font-bold text-emerald-950">Derniers articles</h2>
+            </div>
+            <div id="latest-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"></div>
+            <div id="latest-empty" class="hidden text-center text-slate-500 py-10 border border-dashed border-slate-300 rounded-xl">Aucun article publié pour le moment.</div>
+            <div class="text-center mb-16">
+                <button id="btn-load-more" onclick="loadMoreArticles()" class="load-more-btn hidden">
+                    <span class="icon-svg" data-icon="chevronDown"></span> Voir plus d'articles
+                </button>
+            </div>
+
+            <div class="ad-slot">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7920113065336169" data-ad-slot="REMPLACER_PAR_TON_ID_DE_BLOC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+
+            <div id="circuit-previews" class="space-y-12 mt-14"></div>
+        </div>
+    </main>
+
+    <div id="site-footer-root"></div>
+
+    <script src="site.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
