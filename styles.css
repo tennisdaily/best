@@ -229,7 +229,8 @@ h1, h2, h3, .headline { font-family:'Fraunces', Georgia, serif; }
 
 /* --- hero de la page d'accueil --- */
 .hero-band { background: radial-gradient(circle at 15% 20%, rgba(250,204,21,.12), transparent 45%), linear-gradient(135deg, var(--green-950), var(--green-800) 65%, var(--green-700)); color:#ecfdf5; position:relative; overflow:hidden; }
-.hero-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-weight:700; font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ball); }
+.hero-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-weight:700; font-size:1rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ball); }
+@media (min-width: 768px) { .hero-eyebrow { font-size:1.15rem; } }
 
 /* --- carte article (grille standard) --- */
 .article-card { background:#fff; border-radius:1rem; overflow:hidden; border:1px solid #eef2ee; box-shadow:0 1px 2px rgba(6,95,70,.05); transition: transform .2s ease, box-shadow .2s ease; display:flex; flex-direction:column; }
