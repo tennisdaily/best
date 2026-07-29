@@ -75,7 +75,10 @@ function cleanPreview(content) {
     return escapeHtml((content || '').replace(/^##\s*/gm, '').replace(/\*\*(.*?)\*\*/g, '$1'));
 }
 function categoryChipClass(cat) {
-    return cat === 'ATP' ? 'chip-atp' : cat === 'WTA' ? 'chip-wta' : 'chip-itf';
+    if (cat === 'ATP') return 'chip-atp';
+    if (cat === 'WTA') return 'chip-wta';
+    if (cat === 'ITF') return 'chip-itf';
+    return 'chip-divers';
 }
 
 /* --- CADRAGE DE PHOTO (grille 3x3) --- */
@@ -150,7 +153,8 @@ const NAV_LINKS = [
 const CIRCUITS = [
     { page: 'atp', label: 'Circuit ATP', href: 'atp.html' },
     { page: 'wta', label: 'Circuit WTA', href: 'wta.html' },
-    { page: 'itf', label: 'Circuit ITF', href: 'itf.html' }
+    { page: 'itf', label: 'Circuit ITF', href: 'itf.html' },
+    { page: 'divers', label: 'Divers', href: 'divers.html' }
 ];
 
 function renderHeader(activePage) {
@@ -221,6 +225,7 @@ function renderHeader(activePage) {
             <a href="atp.html" style="text-decoration:none;">Circuit ATP</a>
             <a href="wta.html" style="text-decoration:none;">Circuit WTA</a>
             <a href="itf.html" style="text-decoration:none;">Circuit ITF</a>
+            <a href="divers.html" style="text-decoration:none;">Divers</a>
             <a href="a-propos.html" style="text-decoration:none;">À propos</a>
             <a href="contact.html" style="text-decoration:none;">Contact</a>
         </div>
