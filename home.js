@@ -87,11 +87,12 @@ async function loadCircuitPreviews() {
     const circuits = [
         { cat: 'ATP', label: 'Circuit ATP', href: 'atp.html' },
         { cat: 'WTA', label: 'Circuit WTA', href: 'wta.html' },
-        { cat: 'ITF', label: 'Circuit ITF', href: 'itf.html' }
+        { cat: 'ITF', label: 'Circuit ITF', href: 'itf.html' },
+        { cat: 'DIVERS', label: 'Divers', href: 'divers.html' }
     ];
     let html = '';
     for (const c of circuits) {
-        const { data } = await _supabase.from('articles').select('*').eq('category', c.cat).order('id', { ascending: false }).limit(3);
+        const { data } = await _supabase.from('articles').select('*').ilike('category', c.cat).order('id', { ascending: false }).limit(3);
         if (!data || data.length === 0) continue;
         html += `
         <div>
