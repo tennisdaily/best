@@ -60,6 +60,7 @@ async function main() {
         { loc: `${SITE_URL}/atp.html`, changefreq: 'daily', priority: '0.8' },
         { loc: `${SITE_URL}/wta.html`, changefreq: 'daily', priority: '0.8' },
         { loc: `${SITE_URL}/itf.html`, changefreq: 'daily', priority: '0.8' },
+        { loc: `${SITE_URL}/divers.html`, changefreq: 'daily', priority: '0.7' },
         { loc: `${SITE_URL}/a-propos.html`, changefreq: 'monthly', priority: '0.3' },
         { loc: `${SITE_URL}/contact.html`, changefreq: 'monthly', priority: '0.3' },
         { loc: `${SITE_URL}/confidentialite.html`, changefreq: 'yearly', priority: '0.2' },
