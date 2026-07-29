@@ -222,6 +222,7 @@ h1, h2, h3, .headline { font-family:'Fraunces', Georgia, serif; }
 .score-chip.chip-atp { background:#0f172a; color:#7dd3fc; }
 .score-chip.chip-wta { background:#3b0764; color:#e9d5ff; }
 .score-chip.chip-itf { background:#451a03; color:#fde68a; }
+.score-chip.chip-divers { background:#1e293b; color:#cbd5e1; }
 .score-chip .dot { width:.4rem; height:.4rem; border-radius:9999px; background:currentColor; }
 
 /* --- site-header injecté par site.js --- */
