@@ -40,7 +40,7 @@ a { color: inherit; }
 .h-48{height:12rem} .h-64{height:16rem}
 .min-h-screen { min-height: 100vh; }
 .max-w-sm{max-width:24rem} .max-w-lg{max-width:32rem} .max-w-xl{max-width:36rem}
-.max-w-2xl{max-width:42rem} .max-w-6xl{max-width:72rem}
+.max-w-2xl{max-width:42rem} .max-w-3xl{max-width:48rem} .max-w-6xl{max-width:72rem}
 .max-h-24{max-height:6rem} .max-h-\[80vh\]{max-height:80vh} .max-h-\[90vh\]{max-height:90vh}
 .mx-auto { margin-left:auto; margin-right:auto; }
 
