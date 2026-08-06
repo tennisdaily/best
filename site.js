@@ -278,6 +278,10 @@ function renderFooter() {
                     <span class="font-bold text-white tracking-wider">DEUCE <span class="text-yellow-300">ACTU</span></span>
                 </div>
                 <p class="text-xs text-slate-400 leading-relaxed">L'actualité indépendante des circuits ATP, WTA et ITF : analyses, résultats et portraits, publiés au fil de l'eau.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/deuceactu/" target="_blank" rel="noopener" class="social-btn social-instagram" aria-label="Deuce Actu sur Instagram"><span class="icon-svg" data-icon="instagram"></span></a>
+                    <a href="https://www.linkedin.com/in/deuce-actu-1061b2228" target="_blank" rel="noopener" class="social-btn social-linkedin" aria-label="Deuce Actu sur LinkedIn"><span class="icon-svg" data-icon="linkedin"></span></a>
+                </div>
             </div>
             <div>
                 <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Navigation</p>
