@@ -19,7 +19,9 @@ const ICONS = {
     bars: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>',
     scale: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0zM5 7h14M9 3h6"/></svg>',
     link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.5 1.5M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.5-1.5"/></svg>',
-    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+    instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="2.5" y="9" width="3.8" height="12"/><circle cx="4.4" cy="4.2" r="2.2"/><path d="M9.7 9h3.8v1.9h.05c.53-1 1.83-1.9 3.77-1.9 4.03 0 4.78 2.5 4.78 5.75V21h-3.8v-5.4c0-1.3-.02-2.95-1.9-2.95-1.9 0-2.2 1.4-2.2 2.85V21H9.7Z"/></svg>'
 };
 
 // Génère le SVG d'une icône, avec des classes CSS additionnelles (taille, couleur, marges...)
