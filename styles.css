@@ -276,6 +276,7 @@ h1, h2, h3, .headline { font-family:'Fraunces', Georgia, serif; }
 .social-btn:hover { transform:translateY(-2px); color:#fff; }
 .social-btn.social-instagram:hover { background:radial-gradient(circle at 30% 110%, #ffdb73 0%, #fd5949 35%, #d6249f 65%, #285AEB 100%); }
 .social-btn.social-linkedin:hover { background:#0A66C2; }
+.contact-socials .social-btn { background:#f1f5f9; color:#475569; }
 
 /* --- 404 --- */
 .notfound-ball { animation: spin-ball 6s linear infinite; }
