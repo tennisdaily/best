@@ -63,6 +63,9 @@ function escapeHtml(str) {
 function formatArticleContent(content) {
     if (!content) return '';
     let formatted = escapeHtml(content).replace(/\*\*(.*?)\*\*/g, '<em>$1</em>');
+    formatted = formatted.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+        return `<a href="${url}" class="article-link" target="_blank" rel="noopener">${text}</a>`;
+    });
     return formatted.split('\n').map(line => {
         const trimmed = line.trim();
         if (trimmed.startsWith('##')) {
@@ -72,7 +75,7 @@ function formatArticleContent(content) {
     }).join('\n');
 }
 function cleanPreview(content) {
-    return escapeHtml((content || '').replace(/^##\s*/gm, '').replace(/\*\*(.*?)\*\*/g, '$1'));
+    return escapeHtml((content || '').replace(/^##\s*/gm, '').replace(/\*\*(.*?)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'));
 }
 function categoryChipClass(cat) {
     if (cat === 'ATP') return 'chip-atp';
