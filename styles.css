@@ -259,6 +259,8 @@ h1, h2, h3, .headline { font-family:'Fraunces', Georgia, serif; }
 .article-body { font-size:1.02rem; line-height:1.85; color:#1f2d27; }
 .article-body h3 { font-family:'Fraunces', serif; font-size:1.3rem; margin:2rem 0 .75rem; color:#0f2d22; }
 .article-body em { color:var(--green-800); font-style:italic; }
+.article-body .article-link, .article-link { color:#2563eb; text-decoration:underline; font-weight:600; }
+.article-body .article-link:hover, .article-link:hover { color:#1d4ed8; }
 
 /* --- page admin --- */
 .admin-shell { max-width:920px; margin:0 auto; }
